@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, BookOpen, CalendarDays, FileText, GraduationCap, Landmark, Mail, MapPin, Menu, Microscope, Music2, Phone, ShieldCheck, Sparkles, Trophy, Users } from "lucide-react";
+import { ArrowRight, BookOpen, CalendarDays, FileText, GraduationCap, Landmark, Mail, MapPin, Menu, Microscope, Music2, Phone, Search, ShieldCheck, Sparkles, Trophy, Users } from "lucide-react";
 
 const sourceNews = "https://sites.google.com/arkasgymn1.com.ua/arkasgymn1/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8";
 const quickLinks = [
@@ -37,19 +37,21 @@ const life = [
 
 export default function Home() {
   return <main id="top">
-    <div className="topline"><span>Миколаїв · Україна</span><a href="#vstup">Вступ 2026–2027 <ArrowRight size={14}/></a></div>
-    <header className="site-header">
-      <a className="brand" href="#top" aria-label="На початок сторінки"><span className="brand-mark">А</span><span><b>Миколаївський ліцей</b><small>імені Миколи Аркаса</small></span></a>
+    <div className="topline home-topline"><span>Миколаїв · Україна</span><a href="#vstup">Вступ 2026–2027 <ArrowRight size={14}/></a></div>
+    <header className="site-header ref-header">
+      <a className="ref-brand" href="#top" aria-label="На початок сторінки"><strong>ARKAS</strong><i/><span>Миколаївський ліцей<br/>імені Миколи Аркаса</span></a>
       <nav aria-label="Головна навігація"><a href="#pro-licei">Про ліцей</a><a href="#osvita">Освіта</a><a href="#rezultaty">Досягнення</a><a href="#zhyttia">Життя ліцею</a><a href="#novyny">Новини</a></nav>
-      <a className="header-cta" href="#kontakty">Контакти <ArrowRight size={16}/></a>
+      <div className="ref-header-actions"><a href="#kontakty">Контакти</a><button type="button" aria-label="Пошук по сайту"><Search/></button><a className="header-cta" href="#vstup">Вступ 2026 <ArrowRight size={16}/></a></div>
       <details className="mobile-menu"><summary aria-label="Відкрити меню"><Menu/></summary><div><a href="#pro-licei">Про ліцей</a><a href="#osvita">Освіта</a><a href="#rezultaty">Досягнення</a><a href="#zhyttia">Життя ліцею</a><a href="#vstup">Вступ</a><a href="#kontakty">Контакти</a></div></details>
     </header>
 
-    <section className="hero">
-      <Image className="hero-image" src="/lyceum-hero-day.jpg" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill priority sizes="100vw"/><div className="hero-overlay"/>
-      <div className="hero-copy section-shell"><div className="hero-meta"><span>1863</span><span>Миколаїв · Україна</span></div><p className="hero-name">Миколаївський ліцей імені Миколи Аркаса</p><h1>Традиції, що<br/><em>формують майбутнє</em></h1><p className="hero-lead">Сучасний академічний ліцей із глибокою історією, українською культурною основою та середовищем, у якому знання, творчість і дослідження стають частиною особистості.</p><div className="hero-actions"><a className="button button-accent" href="#vstup">Вступ 2026 <ArrowRight size={18}/></a><a className="button button-glass" href="#osvita">Гуманітарний профіль</a></div></div>
-      <div className="hero-foot"><span>163 роки історії</span><span>Освіта · Культура · Ідентичність</span></div>
+    <section className="ref-hero">
+      <Image className="ref-hero-image" src="/lyceum-hero-real.png" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill priority sizes="100vw"/>
+      <div className="ref-hero-wash"/><div className="ref-monogram" aria-hidden="true">А</div>
+      <div className="ref-hero-copy"><span className="ref-kicker">1863 — сьогодні</span><h1><em>Більше,</em><b>ніж школа</b></h1><p>Люди. Ідеї. Можливості.<br/>Тут народжується покоління,<br/>що змінює Україну.</p><div className="ref-actions"><a className="ref-cta" href="#vstup">Вступ 2026 <ArrowRight/></a><a className="ref-video" href="#pro-licei"><span>▶</span> Дивитися історію</a></div></div>
+      <div className="ref-pillars"><div><BookOpen/><span>Освіта<br/>з характером</span></div><div><Landmark/><span>Сучасні<br/>можливості</span></div><div><Sparkles/><span>Активне<br/>учнівське життя</span></div><div><Users/><span>Сильна<br/>спільнота</span></div></div>
     </section>
+    <section className="ref-stats"><div><strong>163</strong><span>роки історії</span></div><div><strong>100+</strong><span>перемог і відзнак</span></div><div><span>Сучасна<br/>освіта</span></div><div><span>Активне<br/>ліцейське життя</span></div><blockquote>« Народ, що знає свою історію,<br/>буде сильніше майбутнє. »<cite>Микола Аркас</cite></blockquote></section>
 
     <section className="quick section-shell"><header className="section-heading horizontal"><div><span>Швидкий доступ</span><h2>Усе важливе — поруч</h2></div><p>Зрозуміла навігація для учнів, батьків і майбутніх ліцеїстів.</p></header><div className="quick-grid">{quickLinks.map(({icon:Icon,title,text,href})=><a className="quick-card" href={href} key={title} target={href.startsWith("http")?"_blank":undefined}><Icon/><div><h3>{title}</h3><p>{text}</p></div><ArrowRight className="arrow"/></a>)}</div></section>
 
