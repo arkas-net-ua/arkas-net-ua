@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, BookOpen, CalendarDays, FileText, GraduationCap, Landmark, Mail, MapPin, Menu, Microscope, Music2, Phone, Search, ShieldCheck, Sparkles, Trophy, Users } from "lucide-react";
+import { FitScreen, HomeScreen } from "@/components/home-screen";
 
 const sourceNews = "https://sites.google.com/arkasgymn1.com.ua/arkasgymn1/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8";
 const quickLinks = [
@@ -38,40 +39,105 @@ const life = [
 export default function Home() {
   return <main id="top">
     <div className="topline home-topline"><span>Миколаїв · Україна</span><a href="#vstup">Вступ 2026–2027 <ArrowRight size={14}/></a></div>
+    <HomeScreen>
     <header className="site-header ref-header">
       <a className="ref-brand" href="#top" aria-label="На початок сторінки"><strong>ARKAS</strong><i/><span>Миколаївський ліцей<br/>імені Миколи Аркаса</span></a>
-      <nav aria-label="Головна навігація"><a href="#pro-licei">Про ліцей</a><a href="#osvita">Освіта</a><a href="#rezultaty">Досягнення</a><a href="#zhyttia">Життя ліцею</a><a href="#novyny">Новини</a></nav>
-      <div className="ref-header-actions"><a href="#kontakty">Контакти</a><button type="button" aria-label="Пошук по сайту"><Search/></button><a className="header-cta" href="#vstup">Вступ 2026 <ArrowRight size={16}/></a></div>
+      <nav aria-label="Головна навігація"><a href="#pro-licei">Про ліцей</a><a href="#osvita">Освіта</a><a href="#rezultaty">Досягнення</a><a href="#zhyttia">Життя ліцею</a><a href="#novyny">Новини</a><a href="#kontakty">Контакти</a></nav>
+      <div className="ref-header-actions"><button type="button" aria-label="Пошук по сайту"><Search/></button><a className="header-cta" href="#vstup">Вступ 2026 <ArrowRight size={16}/></a></div>
       <details className="mobile-menu"><summary aria-label="Відкрити меню"><Menu/></summary><div><a href="#pro-licei">Про ліцей</a><a href="#osvita">Освіта</a><a href="#rezultaty">Досягнення</a><a href="#zhyttia">Життя ліцею</a><a href="#vstup">Вступ</a><a href="#kontakty">Контакти</a></div></details>
     </header>
 
     <section className="ref-hero">
-      <Image className="ref-hero-image" src="/lyceum-hero-real.png" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill priority sizes="100vw"/>
-      <div className="ref-hero-wash"/><div className="ref-monogram" aria-hidden="true">А</div>
-      <div className="ref-hero-copy"><span className="ref-kicker">1863 — сьогодні</span><h1><em>Більше,</em><b>ніж школа</b></h1><p>Люди. Ідеї. Можливості.<br/>Тут народжується покоління,<br/>що змінює Україну.</p><div className="ref-actions"><a className="ref-cta" href="#vstup">Вступ 2026 <ArrowRight/></a><a className="ref-video" href="#pro-licei"><span>▶</span> Дивитися історію</a></div></div>
+      <div className="ref-hero-stage">
+        <div className="ref-hero-bloom" aria-hidden="true"><img src="/lyceum-hero-real.png" alt=""/></div>
+        <div className="ref-a-structure" aria-hidden="true"><div className="ref-a-photo"/><i className="ref-a-window ref-a-window-top"/><i className="ref-a-window ref-a-window-bottom"/></div>
+        <svg className="ref-lyre" viewBox="0 0 90 128" fill="none" aria-hidden="true">
+          <path d="M45 10c-22 12-28 46-18 78M45 10c22 12 28 46 18 78" stroke="#c4a36a" strokeWidth="1.15"/>
+          <path d="M27 88h36M33 88v22h24V88" stroke="#c4a36a" strokeWidth="1.15"/>
+          <path d="M37 28v58M45 22v64M53 28v58" stroke="#c4a36a" strokeWidth="1"/>
+          <circle cx="45" cy="14" r="3.2" stroke="#c4a36a" strokeWidth="1.1"/>
+        </svg>
+        <div className="ref-hero-copy">
+          <span className="ref-kicker"><i/>1863 — сьогодні</span>
+          <h1><em>Більше,</em><b>ніж школа</b></h1>
+          <p>Люди. Ідеї. Можливості.<br/>Тут народжується покоління,<br/>що змінює Україну.</p>
+          <div className="ref-actions"><a className="ref-cta" href="#vstup">Вступ 2026 <ArrowRight/></a><a className="ref-video" href="#pro-licei"><span>▶</span> Дивитися відео</a></div>
+        </div>
+        <aside className="ref-heritage"><em>Микола Аркас</em><p>спадщина,<br/>що надихає</p></aside>
+      </div>
       <div className="ref-pillars"><div><BookOpen/><span>Освіта<br/>з характером</span></div><div><Landmark/><span>Сучасні<br/>можливості</span></div><div><Sparkles/><span>Активне<br/>учнівське життя</span></div><div><Users/><span>Сильна<br/>спільнота</span></div></div>
     </section>
-    <section className="ref-stats"><div><strong>163</strong><span>роки історії</span></div><div><strong>100+</strong><span>перемог і відзнак</span></div><div><span>Сучасна<br/>освіта</span></div><div><span>Активне<br/>ліцейське життя</span></div><blockquote>« Народ, що знає свою історію,<br/>буде сильніше майбутнє. »<cite>Микола Аркас</cite></blockquote></section>
+    <section className="ref-stats"><div><strong>163</strong><span>роки історії</span></div><div><strong>1000+</strong><span>учнів</span></div><div><span>Сучасна<br/>освіта</span></div><div><span>Активне<br/>ліцейське життя</span></div><blockquote>« Народ, що знає свою історію,<br/>буде сильніше майбутнє. »<cite>Микола Аркас</cite></blockquote></section>
+    </HomeScreen>
 
-    <section className="quick section-shell"><header className="section-heading horizontal"><div><span>Швидкий доступ</span><h2>Усе важливе — поруч</h2></div><p>Зрозуміла навігація для учнів, батьків і майбутніх ліцеїстів.</p></header><div className="quick-grid">{quickLinks.map(({icon:Icon,title,text,href})=><a className="quick-card" href={href} key={title} target={href.startsWith("http")?"_blank":undefined}><Icon/><div><h3>{title}</h3><p>{text}</p></div><ArrowRight className="arrow"/></a>)}</div></section>
+    <FitScreen className="screen-quick">
+    <section className="quick"><header className="section-heading horizontal"><div><span>Швидкий доступ</span><h2>Усе важливе — поруч</h2></div><p>Зрозуміла навігація для учнів, батьків і майбутніх ліцеїстів.</p></header><div className="quick-grid">{quickLinks.map(({icon:Icon,title,text,href})=><a className="quick-card" href={href} key={title} target={href.startsWith("http")?"_blank":undefined}><Icon/><div><h3>{title}</h3><p>{text}</p></div><ArrowRight className="arrow"/></a>)}</div></section>
+    </FitScreen>
 
-    <section className="history section-shell" id="pro-licei"><div className="history-copy"><span className="eyebrow">Ліцей із характером · Історія</span><h2>Місце, де історія продовжується</h2><p className="large-copy">Від Маріїнської жіночої гімназії 1863 року до сучасного ліцею імені Миколи Аркаса — це історія поколінь, які змінювали місто через освіту.</p><p>Сьогодні ліцей поєднує академічну підготовку, українську культурну спадщину та сучасні освітні підходи.</p></div><div className="timeline">{timeline.map(([year,title,text])=><article key={year}><strong>{year}</strong><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>
+    <FitScreen className="screen-history">
+    <section className="history" id="pro-licei">
+      <div className="history-copy">
+        <span className="eyebrow">Ліцей із характером · Історія</span>
+        <h2>Місце, де історія<br/>продовжується</h2>
+        <p className="large-copy">Від Маріїнської жіночої гімназії 1863 року до сучасного ліцею імені Миколи Аркаса — це історія поколінь, які змінювали місто через освіту.</p>
+        <p>Сьогодні ліцей поєднує академічну підготовку, українську культурну спадщину та сучасні освітні підходи.</p>
+        <blockquote className="history-quote">«Народ, що знає свою історію, буде сильніше майбутнє.»<cite>Микола Аркас</cite></blockquote>
+      </div>
+      <div className="history-visual">
+        <span className="history-watermark" aria-hidden="true">1863</span>
+        <div className="history-photo">
+          <Image src="/lyceum-hero-day.jpg" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:800px) 100vw, 46vw"/>
+          <span>Фасад закладу · Миколаїв</span>
+        </div>
+      </div>
+      <ol className="history-eras">{timeline.map(([year,title,text])=><li key={year}><b>{year}</b><h3>{title}</h3><p>{text}</p></li>)}</ol>
+    </section>
+    </FitScreen>
 
-    <section className="arkas" id="arkas"><div className="arkas-image"><Image src="/mykola-arkas.jpg" alt="Микола Аркас — історик, композитор і просвітник" fill sizes="(max-width:760px) 100vw,40vw"/></div><div className="arkas-copy"><Music2/><span className="eyebrow">Ім’я, яке визначає нашу ідентичність · Спадщина</span><h2>Микола Аркас</h2><p className="large-copy">Історик, композитор, просвітник і громадський діяч, для якого українська культура була справою життя.</p><p>Його ім’я для ліцею — не формальність, а філософія освіти. Тут проводять Аркасівські читання, працюють із музеєм історії закладу, створюють краєзнавчі й науково-дослідницькі проєкти.</p><div className="arkas-tags"><span>Історія України-Русі</span><span>Опера «Катерина»</span><span>Миколаївська «Просвіта»</span></div></div></section>
+    <FitScreen className="screen-arkas">
+    <section className="arkas" id="arkas">
+      <div className="arkas-image"><Image src="/mykola-arkas.jpg" alt="Микола Аркас — історик, композитор і просвітник" fill sizes="(max-width:760px) 100vw,42vw"/></div>
+      <div className="arkas-copy">
+        <span className="arkas-mark" aria-hidden="true">А</span>
+        <Music2/>
+        <span className="eyebrow">Ім’я, яке визначає нашу ідентичність · Спадщина</span>
+        <strong className="arkas-years">1853 — 1909</strong>
+        <h2>Микола Аркас</h2>
+        <p className="large-copy">Історик, композитор, просвітник і громадський діяч, для якого українська культура була справою життя.</p>
+        <p>Його ім’я для ліцею — не формальність, а філософія освіти. Тут проводять Аркасівські читання, працюють із музеєм історії закладу, створюють краєзнавчі й науково-дослідницькі проєкти.</p>
+        <blockquote className="arkas-quote">Спадщина, що надихає нове покоління вчитися, досліджувати й берегти Україну.</blockquote>
+        <div className="arkas-tags"><span>Історія України-Русі</span><span>Опера «Катерина»</span><span>Миколаївська «Просвіта»</span></div>
+      </div>
+    </section>
+    </FitScreen>
 
+    <FitScreen className="screen-education">
     <section className="education-editorial" id="osvita"><div className="education-art"><Image src="/education-library.png" alt="Бібліотека як простір знань і досліджень" fill sizes="(max-width:900px) 100vw,40vw"/><span className="education-art-words">Люди<br/>Ідеї<br/>Розвиток<br/>Майбутнє</span><span className="education-art-a" aria-hidden="true">А</span></div><div className="education-content"><header className="education-editorial-head"><div><span className="eyebrow">Освітній простір</span><h2>Освіта, яка вчить<br/><em>думати</em></h2></div><p>Чотири напрямки розвитку особистості — від ґрунтовних знань до вміння самостійно досліджувати світ.</p></header><div className="education-columns">{education.map(({icon:Icon,title,text},i)=><article key={title}><span>0{i+1}</span><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div></div><div className="education-editorial-quote"><strong>“</strong><em>Традиції. Знання. Люди. Майбутнє.</em><i/><span>Ми більше, ніж школа</span></div></section>
+    </FitScreen>
 
+    <FitScreen className="screen-results">
     <section className="results" id="rezultaty"><div className="section-shell"><header className="section-heading light"><span>Результати</span><h2>Досягнення, які говорять самі за себе</h2><p>Понад три десятиліття педагогічного пошуку, освітніх інновацій і командної праці.</p></header><div className="results-grid">{results.map(([value,title,text])=><article key={title}><strong>{value}</strong><h3>{title}</h3><p>{text}</p></article>)}</div><div className="award-story"><div><Trophy/><span>Професійне визнання</span><h3>Золота медаль «Інноватика в сучасній освіті»</h3><p>У 2024 році ліцей знову відзначили за створення та впровадження інноваційних освітніх проєктів.</p></div><div className="award-image"><Image src="/teacher-award.jpg" alt="Нагородження педагогів Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:760px) 100vw,45vw"/></div></div></div></section>
+    </FitScreen>
 
-    <section className="community section-shell"><div><span className="eyebrow">Ліцей — це люди · Спільнота</span><h2>Будівлі створюють простір.<br/><em>Люди створюють школу.</em></h2></div><div className="community-image"><Image src="/lyceum-community.jpg" alt="Учні та педагоги Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:760px) 100vw,52vw"/></div><div className="community-cards"><a href="/uchni"><Users/><div><h3>Наші учні</h3><p>Ідеї, відкриття, перемоги.</p></div><ArrowRight/></a><a href="/vchyteli"><Sparkles/><div><h3>Наші вчителі</h3><p>Досвід, підтримка, натхнення.</p></div><ArrowRight/></a><a href="/vypusknyky"><GraduationCap/><div><h3>Наші випускники</h3><p>Історії, що продовжуються.</p></div><ArrowRight/></a></div></section>
+    <FitScreen className="screen-community">
+    <section className="community"><div><span className="eyebrow">Ліцей — це люди · Спільнота</span><h2>Будівлі створюють простір.<br/><em>Люди створюють школу.</em></h2></div><div className="community-image"><Image src="/lyceum-community.jpg" alt="Учні та педагоги Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:760px) 100vw,90vw"/></div><div className="community-cards"><a href="/uchni"><Users/><div><h3>Наші учні</h3><p>Ідеї, відкриття, перемоги.</p></div><ArrowRight/></a><a href="/vchyteli"><Sparkles/><div><h3>Наші вчителі</h3><p>Досвід, підтримка, натхнення.</p></div><ArrowRight/></a><a href="/vypusknyky"><GraduationCap/><div><h3>Наші випускники</h3><p>Історії, що продовжуються.</p></div><ArrowRight/></a></div></section>
+    </FitScreen>
 
+    <FitScreen className="screen-life">
     <section className="life" id="zhyttia"><div className="section-shell"><header className="section-heading horizontal"><div><span>Ліцейне життя</span><h2>Не лише уроки</h2></div><p>Середовище, у якому хочеться зростати, дружити, творити й брати відповідальність.</p></header><div className="life-layout"><div className="life-image"><Image src="/life-workshop.jpg" alt="Учні ліцею на майстер-класі з виготовлення різдвяної зірки" fill sizes="(max-width:760px) 100vw,50vw"/></div><div className="life-list">{life.map(([title,text],i)=><article key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></div></section>
+    </FitScreen>
 
+    <FitScreen className="screen-resilience">
     <section className="resilience" id="bezpeka"><div className="section-shell resilience-grid"><div><Landmark/><span className="eyebrow">Ліцей, що вистояв · Незламність</span><h2>Історію неможливо зруйнувати</h2></div><div><p className="large-copy">У 2022 році російська ракета зруйнувала центральну частину історичної будівлі ліцею. Та разом зі стінами не зникли пам’ять, традиції й люди.</p><p>Миколаївський ліцей імені Миколи Аркаса продовжує навчати, досліджувати, творити й виховувати нові покоління українців. Саме це і є справжня незламність.</p><div className="resilience-line"><span>Пам’ятаємо</span><i/><span>Навчаємо</span><i/><span>Відновлюємо</span></div></div></div></section>
+    </FitScreen>
 
-    <section className="admission section-shell" id="vstup"><div className="admission-copy"><span className="eyebrow">Вступ до ліцею · 2026–2027</span><h2>Станьте частиною Аркасівської спільноти</h2><p>Обираючи ліцей, ви обираєте не лише якісну освіту, а й середовище, де дитина навчається мислити, досліджувати та відчувати відповідальність за майбутнє своєї країни.</p><div className="admission-options"><a href="mailto:arkasgymn1@ukr.net?subject=Умови вступу 2026–2027"><FileText/><span><b>Умови вступу</b><small>Перелік документів та правила прийому</small></span><ArrowRight/></a><a href="mailto:arkasgymn1@ukr.net?subject=День відкритих дверей"><CalendarDays/><span><b>Дні відкритих дверей</b><small>Знайомство з адміністрацією та педагогами</small></span><ArrowRight/></a></div></div><div className="admission-image"><Image src="/admission-2025.jpg" alt="Життя та вступ до Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:760px) 100vw,38vw"/></div></section>
+    <FitScreen className="screen-admission">
+    <section className="admission" id="vstup"><div className="admission-copy"><span className="eyebrow">Вступ до ліцею · 2026–2027</span><h2>Станьте частиною Аркасівської спільноти</h2><p>Обираючи ліцей, ви обираєте не лише якісну освіту, а й середовище, де дитина навчається мислити, досліджувати та відчувати відповідальність за майбутнє своєї країни.</p><div className="admission-options"><a href="mailto:arkasgymn1@ukr.net?subject=Умови вступу 2026–2027"><FileText/><span><b>Умови вступу</b><small>Перелік документів та правила прийому</small></span><ArrowRight/></a><a href="mailto:arkasgymn1@ukr.net?subject=День відкритих дверей"><CalendarDays/><span><b>Дні відкритих дверей</b><small>Знайомство з адміністрацією та педагогами</small></span><ArrowRight/></a></div></div><div className="admission-image"><Image src="/admission-2025.jpg" alt="Життя та вступ до Миколаївського ліцею імені Миколи Аркаса" fill sizes="(max-width:760px) 100vw,38vw"/></div></section>
+    </FitScreen>
 
-    <section className="news section-shell" id="novyny"><header className="section-heading horizontal"><div><span>Актуальні новини · Життя ліцею</span><h2>Події, досягнення, перемоги</h2></div><a className="text-link" href={sourceNews} target="_blank">Усі новини <ArrowRight/></a></header><div className="news-grid"><article className="news-main"><span>Головна подія · Традиції</span><h3>З днем народження, любий ліцею!</h3><p>Свято пам’яті поколінь, сили спільноти та віри у майбутнє Аркасівської родини.</p><a href={sourceNews} target="_blank">Читати <ArrowRight/></a></article><article><span>Творчість</span><h3>Канікули проводимо весело</h3><p>Майстер-клас із виготовлення різдвяної зірки для учнів 5 класу.</p></article><article><span>Освіта</span><h3>Google for Education</h3><p>Розвиток цифрових компетентностей і безпечної роботи в мережі.</p></article><article><span>Наука</span><h3>Аркасівські читання</h3><p>Щорічна учнівська наукова конференція та презентація досліджень.</p></article></div></section>
+    <FitScreen className="screen-news">
+    <section className="news" id="novyny"><header className="section-heading horizontal"><div><span>Актуальні новини · Життя ліцею</span><h2>Події, досягнення, перемоги</h2></div><a className="text-link" href={sourceNews} target="_blank">Усі новини <ArrowRight/></a></header><div className="news-grid"><article className="news-main"><span>Головна подія · Традиції</span><h3>З днем народження, любий ліцею!</h3><p>Свято пам’яті поколінь, сили спільноти та віри у майбутнє Аркасівської родини.</p><a href={sourceNews} target="_blank">Читати <ArrowRight/></a></article><article><span>Творчість</span><h3>Канікули проводимо весело</h3><p>Майстер-клас із виготовлення різдвяної зірки для учнів 5 класу.</p></article><article><span>Освіта</span><h3>Google for Education</h3><p>Розвиток цифрових компетентностей і безпечної роботи в мережі.</p></article><article><span>Наука</span><h3>Аркасівські читання</h3><p>Щорічна учнівська наукова конференція та презентація досліджень.</p></article></div></section>
+    </FitScreen>
 
     <footer id="kontakty"><div className="footer-main section-shell"><div className="footer-brand"><span className="brand-mark">А</span><h2>Миколаївський ліцей<br/>імені Миколи Аркаса</h2><p>Традиції, що формують майбутнє.</p></div><div><h3>Адреса</h3><p><MapPin/>54006, м. Миколаїв<br/>вул. Вадима Благовісного, 34</p></div><div><h3>Телефони</h3><a href="tel:+380512378606"><Phone/> (0512) 37-86-06</a><a href="tel:+380512378626">37-86-26</a><a href="tel:+380512378617">37-86-17</a></div><div><h3>Електронна пошта</h3><a href="mailto:arkasgymn1@ukr.net"><Mail/> arkasgymn1@ukr.net</a><a href={sourceNews} target="_blank">Архів старого сайту <ArrowRight/></a></div></div><div className="footer-bottom section-shell"><span>© 2026 Миколаївський ліцей імені Миколи Аркаса</span><a href="#top">На початок ↑</a></div></footer>
   </main>;
