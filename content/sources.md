@@ -10,6 +10,7 @@
 ## Використані зображення
 
 - `lyceum-building.jpg` — «1 українська гімназія Аркаса.jpg», Wikimedia Commons.
+- `lyceum-hero-day.jpg` — «Перша українська гімназія імені Миколи Аркаса.jpg», автор Mezinov Alexey Viktorovich, Wikimedia Commons, CC BY-SA 3.0.
 - `mykola-arkas.jpg` — «Аркас Микола композитор.2.jpg», Wikimedia Commons.
 - `life-workshop.jpg` — фото майстер-класу «Канікули проводимо весело», офіційна сторінка новин ліцею.
 - `lyceum-community.jpg` — колаж до дня народження ліцею, офіційна сторінка новин ліцею.

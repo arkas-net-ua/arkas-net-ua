@@ -46,7 +46,7 @@ export default function Home() {
     </header>
 
     <section className="hero">
-      <Image className="hero-image" src="/lyceum-building.jpg" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill priority sizes="100vw"/><div className="hero-overlay"/>
+      <Image className="hero-image" src="/lyceum-hero-day.jpg" alt="Історична будівля Миколаївського ліцею імені Миколи Аркаса" fill priority sizes="100vw"/><div className="hero-overlay"/>
       <div className="hero-copy section-shell"><div className="hero-meta"><span>1863</span><span>Миколаїв · Україна</span></div><p className="hero-name">Миколаївський ліцей імені Миколи Аркаса</p><h1>Традиції, що<br/><em>формують майбутнє</em></h1><p className="hero-lead">Сучасний академічний ліцей із глибокою історією, українською культурною основою та середовищем, у якому знання, творчість і дослідження стають частиною особистості.</p><div className="hero-actions"><a className="button button-accent" href="#vstup">Вступ 2026 <ArrowRight size={18}/></a><a className="button button-glass" href="#osvita">Гуманітарний профіль</a></div></div>
       <div className="hero-foot"><span>163 роки історії</span><span>Освіта · Культура · Ідентичність</span></div>
     </section>
