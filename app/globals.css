@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,0,400..900;6..96,1,400..900&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
@@ -196,6 +196,19 @@ footer{background:var(--blue-dark);color:#d7e1ea}.footer-main{padding:80px 0 65p
 @media(max-width:980px){.home-screen-fit{grid-template-rows:76px minmax(0,1fr) auto}.home-screen .ref-header{height:76px;padding-inline:1.25rem;display:flex}.home-screen .ref-header nav,.home-screen .ref-header-actions{display:none}.home-screen .mobile-menu{display:block}.home-screen .ref-a-structure{left:39%;width:65vw;opacity:.76}.home-screen .ref-hero-copy{left:2rem;width:55%;top:15%}.home-screen .ref-heritage,.home-screen .ref-lyre{display:none}.home-screen .ref-pillars{left:2rem;width:calc(100% - 4rem)}.home-screen .ref-stats{grid-template-columns:repeat(4,1fr);padding-inline:2rem}.home-screen .ref-stats blockquote{display:none}}
 @media(max-width:680px){.home-screen .ref-hero-copy{left:1.2rem;width:calc(100% - 2.4rem);top:10%}.home-screen .ref-hero-copy h1{font-size:clamp(3.4rem,16vw,5.2rem)}.home-screen .ref-hero-copy>p{font-size:1rem}.home-screen .ref-a-structure{left:38%;width:88vw;opacity:.38}.home-screen .ref-pillars{left:1rem;width:calc(100% - 2rem);min-height:104px}.home-screen .ref-pillars>div{padding:13px 4px}.home-screen .ref-pillars svg{width:22px;height:22px}.home-screen .ref-pillars span{font-size:.65rem}.home-screen .ref-stats{grid-template-columns:repeat(2,1fr);gap:0;padding:14px 1rem}.home-screen .ref-stats>div{padding:5px .8rem}.home-screen .ref-stats>div:nth-child(2){border-right:0}.home-screen .ref-stats>div:nth-child(n+3){border-top:1px solid rgba(18,60,115,.16)}.home-screen .ref-stats strong{font-size:2rem}}
 @media(max-height:780px) and (min-width:981px){.home-screen-fit{grid-template-rows:72px minmax(0,1fr) auto}.home-screen .ref-header{height:72px}.home-screen .ref-hero-copy{top:9%}.home-screen .ref-hero-copy h1{margin:18px 0 14px;font-size:clamp(3.65rem,6.5vw,4.8rem)}.home-screen .ref-hero-copy>p{font-size:.96rem}.home-screen .ref-actions{margin-top:20px}.home-screen .ref-cta{height:52px}.home-screen .ref-pillars{min-height:108px}.home-screen .ref-pillars>div{padding:12px 8px}.home-screen .ref-stats{min-height:104px;padding-block:14px}.home-screen .ref-stats strong{font-size:2.1rem}.home-screen .ref-stats blockquote{font-size:1rem}}
+
+/* Reference type system: high-contrast editorial display + readable Ukrainian grotesk. */
+.home-screen,.home-screen .ref-header,.home-screen .ref-hero,.home-screen .ref-stats{font-family:"Manrope",Arial,sans-serif}
+.home-screen .ref-brand strong,.home-screen .ref-hero-copy h1,.home-screen .ref-heritage em,.home-screen .ref-stats strong,.home-screen .ref-stats blockquote{font-family:"Bodoni Moda",Georgia,serif}
+.home-screen .ref-brand strong{font-weight:500;letter-spacing:.055em}
+.home-screen .ref-header nav{font-family:"Manrope",Arial,sans-serif;font-weight:700;letter-spacing:-.025em}
+.home-screen .ref-hero-copy h1{font-weight:500;letter-spacing:-.075em;line-height:.82}
+.home-screen .ref-hero-copy h1 em{font-weight:500}
+.home-screen .ref-hero-copy h1 b{font-weight:500;letter-spacing:-.07em}
+.home-screen .ref-kicker{font-weight:600;letter-spacing:.23em}
+.home-screen .ref-hero-copy>p{font-family:"Manrope",Arial,sans-serif;font-weight:700;letter-spacing:-.025em}
+.home-screen .ref-pillars span,.home-screen .ref-stats span,.home-screen .ref-header .header-cta,.home-screen .ref-video{font-family:"Manrope",Arial,sans-serif;font-weight:700;letter-spacing:-.03em}
+.home-screen .ref-stats strong{font-weight:550;letter-spacing:-.055em}
 
 /* Each homepage block locks to one viewport. */
 html{scroll-snap-type:y proximity}
