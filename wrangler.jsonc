@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "arkas-lyceum",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-15",
+  "routes": [
+    { "pattern": "arkas.net.ua", "custom_domain": true },
+    { "pattern": "www.arkas.net.ua", "custom_domain": true }
+  ],
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "arkas-lyceum", "database_id": "8199aee0-3e33-4861-beee-f4ceec33d9d5", "migrations_dir": "migrations" }]
+}
