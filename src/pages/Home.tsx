@@ -80,6 +80,10 @@ export default function Home() {
         </section>
       </FitScreen>
 
+      <FitScreen className="screen-admission">
+        <section className="admission-2026" id="vstup"><Admissions /></section>
+      </FitScreen>
+
       <FitScreen className="screen-history" autoFit={false}>
         <section className="history" id="pro-licei">
           <div className="history-copy">
@@ -175,10 +179,6 @@ export default function Home() {
             <span className="resilience-credit">Миколаїв · Листопад 2022<br />Фото: Віталій Носач / <a href="https://www.rbc.ua/" target="_blank" rel="noreferrer">РБК-Україна</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a><br />Адаптивне кадрування й затемнення</span>
           </div>
         </section>
-      </FitScreen>
-
-      <FitScreen className="screen-admission">
-        <section className="admission-2026" id="vstup"><Admissions /></section>
       </FitScreen>
 
       <FitScreen className="screen-news" autoFit={false}>
